@@ -1,0 +1,103 @@
+VIDEO #1 of DAY 1:
+VITE: Front End 
+On Fakebook, open the virutal enviroment
+cd yourself to reactBook
+Intsal npm create vite@latest
+Chose name if wanted,
+Pick react
+Do npm i
+npm run dev
+Now we have 2 separate ports (5000 flask and 3000 vite)
+We only need fakeBook for the api
+Open index.html. div with ID of root is the entry point for the entire application
+In source/main.jsx you can see the root. The greens are components
+
+COMPONENT: can store data/implement action/ update data. Temporary placeholders to pass data
+Instead of constantly refreshing, everything gets whiped and new code comes in 
+
+
+
+REACT IS A FRAMEWORK TO MODIFY DATA
+
+GET STARTED
+1 Get rid of app.css, favicon, logo
+2 in app.jsx get rid of the imports that don't exist anymore
+3 jsx is that instead of js because it's a combo between html and javascript 
+4 jsx allows onClick events
+
+On Click Events allow to not have to refresh a page and just inject the data into the page
+1 Remove everything inside app.jsx
+2 import react from react
+3 export cons App = () => { return(<div> App <div> )}
+If you're importing code from another file, the file needs to be exported or pass the import in curly brackets
+3 in app.jsx do basic header main footer inside the return and put them inside <></>
+
+Navbar INSTALLATION
+1 In index.html, get the bootrstap links
+2 Make Navbar in app.jsx header make sure all fields are closed 
+3 Wherever it says class, change it to className
+
+RECREATE THE FAKEBOOK HOMEPAGE - at the moment it is all a funciton
+
+1 In app.jsx, go get a list of posts
+2 Import react, {useffect, useState} from 'react'
+3 Create an async request so many request can happen at once from flask server
+4 Use a useEffect, which allows to have an action when page loads and retrievePosts, which gets the data
+
+FLASK CORS: Allows for multiple requests from different origins 
+
+1 pip intsall flask-cors in Fakebook and import it in 
+2 import and instantiate it in root __init__  after this, we can fetch back all the data we asked for
+3 In app.jsx, chang the ul so it's more dynamic about the number of posts
+4 In app.jsx change the amount of posts to only show 2 posts 
+5 Make conditional statements in main section, adding unique keys to each post (their own id keys)
+
+CONDITIONAL: Instead of loading, use spinner (check bootstrap for it)
+
+REACT DEVELOPER TOOLS: Allows to take a look at data being fetched
+1 Intsall it on Chrome and restart page on browser
+2 Using RDT, check the name of the post items and change the app.jsx parts of post to make the more dynamic 
+3 download npm moments that way you can use dateCreated 
+
+
+MAKING ROUTES
+1 In the src folder, make 4 subfolders: api, components, context, views, which are the functionalities
+2 Views Represent the Individual Pages We Go On. Make profil, home, explore jsx files
+  If it involves react, it's a jsx file 
+3 Inside Components make a folder called navbar.jsx and offshore the navbar out of app.jsx 
+4 In the now empty header, just put component direction navbar and it'll do an automatic import at the top
+5 install npm i react-router-dom
+6 Import Browser Router into main.jsx and put it around <app>
+7 Cut the main out of app and put it in a react functional component in home.jsx
+8 in Navbar, import Link from react.router.dom
+9 In Navbar, import Link and replace all anchor tags with link tags
+10 Replace all "href" with "to"
+11 Match all the to links with the path of home or profile
+
+
+VIDEO #2 of DAY 1 - Building Routes
+1 Inside folders, make an Explore.jsx, SignIn.jsx, Shop.jsx, ShopCart.jsx and Contact.jsx
+2 In navbar, add more links and dropdown menu to fit all the new pages
+3 In app.jsx, make new routes possibilities for the new pages 
+4 Create a new ul under the first one for sign in and log out buttons 
+5 Create a Sign in Page inside SignIn.jsx
+6 Create a Profile Page inside Profile.jsx. Careful for the second row of data after first set of div
+7 Copy list from home page and comment it out, because we don't have access to that data just yet
+8 In Explore, build the Explore Page
+9 In Contect, build the Contact Page. Make sure your map style is a javascript expression and and object inside {{border:0 }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
